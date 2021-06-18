@@ -337,3 +337,12 @@ h3 {
 		width: 255px;
 	}
 }
+
+@media screen and (min-width: 1000px) {
+	header,
+	h2,
+	.overall-dashboard,
+	.today-dashboard {
+		padding-inline: 165px;
+	}
+}
