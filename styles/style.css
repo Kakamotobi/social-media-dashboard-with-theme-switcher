@@ -4,7 +4,7 @@
 	--brightRed: hsl(356, 69%, 56%);
 	--facebook: hsl(208, 92%, 53%);
 	--twitter: hsl(203, 89%, 53%);
-	--instagram: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+	--instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
 	--youtube: hsl(348, 97%, 39%);
 	--dark-toggle: linear-gradient(
 		to right,
@@ -122,6 +122,97 @@ h1 {
 }
 
 /* Overall Dashboard */
+.overall-dashboard {
+	margin-bottom: 50px;
+}
+
+.overall {
+	width: 325px;
+	height: 215px;
+	margin-bottom: 23px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	background-color: var(--light-card-bg);
+	border-radius: 5px;
+}
+
+.overall::before {
+	content: "";
+	height: 4px;
+	width: 100%;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.overall.facebook::before {
+	background: var(--facebook);
+}
+
+.overall.twitter::before {
+	background: var(--twitter);
+}
+
+.overall.instagram::before {
+	background: var(--instagram);
+}
+
+.overall.youtube::before {
+	background: var(--youtube);
+}
+
+.overall__account {
+	margin-top: 26px;
+	margin-bottom: 25px;
+	display: flex;
+	align-items: center;
+}
+
+.sns-icon {
+	margin-right: 8px;
+}
+
+.overall__account__name {
+	font-size: 0.75rem;
+	color: var(--light-text-one);
+}
+
+.overall__stat-container {
+	text-align: center;
+}
+
+.overall__stat__num {
+	font-size: 3.3rem;
+}
+
+.overall__stat__desc {
+	margin-bottom: 25px;
+	font-size: 0.8rem;
+	letter-spacing: 5px;
+	font-weight: 300;
+	color: var(--light-text-one);
+	text-transform: uppercase;
+}
+
+.overall__stat__change {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.change-icon {
+	margin-right: 5px;
+}
+
+.overall__stat__change__today {
+	font-size: 0.75rem;
+	color: var(--limeGreen);
+}
+
+.overall__stat__change__today.youtube {
+	color: var(--brightRed);
+}
 
 /* Overview - Today */
 
