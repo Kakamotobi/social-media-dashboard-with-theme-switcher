@@ -411,11 +411,11 @@ body.dark {
 	color: var(--light-text-one);
 }
 
-h2 {
-	color: var(--dark-text-one);
+h2.dark {
+	color: var(--dark-text-two);
 }
 
-h3 {
+h3.dark {
 	color: var(--dark-text-one);
 }
 
