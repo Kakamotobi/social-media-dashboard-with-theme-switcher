@@ -18,12 +18,14 @@
 	--dark-bg: hsl(230, 17%, 14%); /* BG */
 	--dark-bg-top: hsl(232, 19%, 15%); /* Top BG Pattern*/
 	--dark-card-bg: hsl(228, 28%, 20%); /* Card BG */
+	--dark-card-bg-hover: hsl(228, 28%, 25%); /* Card BG Hover */
 	--dark-text-one: hsl(228, 34%, 66%); /* Text */
 	--dark-text-two: hsl(0, 0%, 100%); /* Text */
 	/* --Light Mode-- */
 	--light-bg: hsl(0, 0%, 100%); /* BG */
 	--light-bg-top: hsl(225, 100%, 98%); /* Top BG Pattern */
 	--light-card-bg: hsl(227, 47%, 96%); /* Card BG */
+	--light-card-bg-hover: hsl(229, 17%, 87%); /* Card BG Hover */
 	--light-text-one: hsl(228, 12%, 44%); /* Text */
 	--light-text-two: hsl(230, 17%, 14%); /* Text */
 
@@ -101,7 +103,11 @@ h1 {
 	position: relative;
 	background-color: var(--light-toggle);
 	border-radius: 20px;
+	transition: 250ms;
 	cursor: pointer;
+}
+.toggle-slider:hover {
+	background: var(--dark-toggle);
 }
 
 .toggle-slider::before {
@@ -135,6 +141,12 @@ h1 {
 	position: relative;
 	background-color: var(--light-card-bg);
 	border-radius: 5px;
+	transition: 250ms;
+	cursor: pointer;
+}
+
+.overall:hover {
+	background-color: var(--light-card-bg-hover);
 }
 
 .overall::before {
@@ -240,6 +252,12 @@ h3 {
 	justify-content: space-between;
 	background-color: var(--light-card-bg);
 	border-radius: 5px;
+	transition: 250ms;
+	cursor: pointer;
+}
+
+.today__item:hover {
+	background-color: var(--light-card-bg-hover);
 }
 
 .today__item__info {
@@ -345,4 +363,66 @@ h3 {
 	.today-dashboard {
 		padding-inline: 165px;
 	}
+}
+
+/* -----Dark Mode----- */
+body.dark {
+	background: linear-gradient(
+		to bottom,
+		var(--dark-bg-top) 235px,
+		var(--dark-bg) 235px 100%
+	);
+	color: var(--dark-text-two);
+}
+
+.title.dark {
+	border-color: var(--dark-text-one);
+}
+
+.title__desc.dark {
+	color: var(--dark-text-one);
+}
+
+.dark-mode.dark {
+	color: var(--dark-text-one);
+}
+
+.toggle-slider.dark {
+	background: var(--dark-toggle);
+}
+
+.toggle-slider.dark::before {
+	background-color: var(--dark-bg);
+}
+
+.overall.dark {
+	background-color: var(--dark-card-bg);
+}
+
+.overall.dark:hover {
+	background-color: var(--dark-card-bg-hover);
+}
+
+.overall__account__name.dark {
+	color: var(--dark-text-one);
+}
+
+.overall__stat__desc.dark {
+	color: var(--light-text-one);
+}
+
+h2 {
+	color: var(--dark-text-one);
+}
+
+h3 {
+	color: var(--dark-text-one);
+}
+
+.today__item.dark {
+	background-color: var(--dark-card-bg);
+}
+
+.today__item.dark:hover {
+	background-color: var(--dark-card-bg-hover);
 }
