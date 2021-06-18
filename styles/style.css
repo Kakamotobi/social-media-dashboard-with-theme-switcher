@@ -122,7 +122,7 @@ h1 {
 
 /* Overall Dashboard */
 .overall-dashboard {
-	margin-bottom: 50px;
+	margin-bottom: 27px;
 }
 
 .overall {
@@ -226,6 +226,10 @@ h3 {
 	color: var(--light-text-one);
 }
 
+.today-dashboard {
+	margin-bottom: 50px;
+}
+
 .today__item {
 	width: 325px;
 	height: 125px;
@@ -272,4 +276,64 @@ h3 {
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 768px) {
+	/* Header */
+	header {
+		width: 100%;
+		padding-inline: 100px;
+		margin-bottom: 50px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.title {
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+
+	.title__desc {
+		margin-bottom: 0;
+	}
+
+	.dark-mode-toggle {
+		width: auto;
+		margin-bottom: 0;
+	}
+
+	.dark-mode {
+		margin-right: 10px;
+	}
+
+	/* Overall Dashboard */
+	.overall-dashboard {
+		width: 100%;
+		padding-inline: 100px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.overall {
+		width: 255px;
+	}
+
+	/* Overview - Today */
+	h2 {
+		width: 100%;
+		padding-inline: 100px;
+	}
+	.today-dashboard {
+		width: 100%;
+		padding-inline: 100px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.today__item {
+		width: 255px;
+	}
 }
