@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="styles/style.css" />
+
+		<title>Frontend Mentor | social-media-dashboard-with-theme-switcher</title>
+	</head>
+	<body>
+		<header>
+			<div class="title">
+				<h1>Social Media Dashboard</h1>
+				<p>Total Followers: 23,004</p>
+			</div>
+			<div class="dark-mode-toggle">
+				<p>Dark Mode</p>
+				<label class="toggle">
+					<input type="checkbox" />
+					<span class="slider"></span>
+				</label>
+			</div>
+		</header>
+
+		<section class="overall-dashboard">
+			<div class="overall facebook">
+				<div class="overall__account facebook">
+					<img
+						src="styles/images/icon-facebook.svg"
+						alt="Facebook Icon"
+						class="sns-icon"
+					/>
+					<p class="overall__account__name facebook">@nathanf</p>
+				</div>
+				<div class="overall__stat-container facebook">
+					<b class="overall__stat__num facebook">1987</b>
+					<p class="overall__stat__desc facebook">Followers</p>
+					<div class="overall__stat__change facebook">
+						<img
+							src="styles/images/icon-up.svg"
+							alt="Up Icon"
+							class="change-icon"
+						/>
+						<p class="overall__stat__change__today facebook">12 Today</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="overall twitter">
+				<div class="overall__account twitter">
+					<img
+						src="styles/images/icon-twitter.svg"
+						alt="Twitter Icon"
+						class="sns-icon"
+					/>
+					<p class="overall__account__name twitter">@nathanf</p>
+				</div>
+				<div class="overall__stat-container twitter">
+					<b class="overall__stat__num twitter">1044</b>
+					<p class="overall__stat__desc twitter">Followers</p>
+					<div class="overall__stat__change twitter">
+						<img
+							src="styles/images/icon-up.svg"
+							alt="Up Icon"
+							class="change-icon"
+						/>
+						<p class="overall__stat__change__today twitter">99 Today</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="overall instagram">
+				<div class="overall__account instagram">
+					<img
+						src="styles/images/icon-instagram.svg"
+						alt="Instagram Icon"
+						class="sns-icon"
+					/>
+					<p class="overall__account__name instagram">@nathanf</p>
+				</div>
+				<div class="overall__stat-container instagram">
+					<b class="overall__stat__num instagram">11k</b>
+					<p class="overall__stat__desc instagram">Followers</p>
+					<div class="overall__stat__change instagram">
+						<img
+							src="styles/images/icon-up.svg"
+							alt="Up Icon"
+							class="change-icon"
+						/>
+						<p class="overall__stat__change__today instagram">1099 Today</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="overall youtube">
+				<div class="overall__account youtube">
+					<img
+						src="styles/images/icon-youtube.svg"
+						alt="YouTube Icon"
+						class="sns-icon"
+					/>
+					<p class="overall__account__name youtube">@nathanf</p>
+				</div>
+				<div class="overall__stat-container youtube">
+					<b class="overall__stat__num youtube">8239</b>
+					<p class="overall__stat__desc youtube">Subscribers</p>
+					<div class="overall__stat__change youtube">
+						<img
+							src="styles/images/icon-down.svg"
+							alt="Down Icon"
+							class="change-icon"
+						/>
+						<p class="overall__stat__change__today youtube">144 Today</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Overview - Today -->
+		<section class="today-dashboard">
+			<h2>Overview - Today</h2>
+
+			<div class="today__item facebook">
+				<h3>Page Views</h3>
+				<img
+					src="styles/images/icon-facebook.svg"
+					alt="Facebook Icon"
+					class="sns-icon"
+				/>
+				<div class="today__item__numbers facebook">
+					<b>87</b>
+					<div class="today__item__change facebook">
+						<img
+							src="styles/images/icon-up.svg"
+							alt="Up Icon"
+							class="change-icon"
+						/>
+						<span class="today__item__change__percentage">3%</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="today__item facebook">
+				<h3>Likes</h3>
+				<img
+					src="styles/images/icon-facebook.svg"
+					alt="Facebook Icon"
+					class="sns-icon"
+				/>
+				<div class="today__item__numbers facebook">
+					<b>52</b>
+					<div class="today__item__change facebook">
+						<img
+							src="styles/images/icon-down.svg"
+							alt="Down Icon"
+							class="change-icon"
+						/>
+						<span class="today__item__change__percentage">2%</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="today__item instagram">
+				<h3>Profile Views</h3>
+				<img
+					src="styles/images/icon-instagram.svg"
+					alt="Instagram Icon"
+					class="sns-icon"
+				/>
+				<div class="today__item__numbers instagram">
+					<b>52k</b>
+					<div class="today__item__change instagram">
+						<img
+							src="styles/images/icon-up.svg"
+							alt="Up Icon"
+							class="change-icon"
+						/>
+						<span class="today__item__change__percentage">1375%</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="today__item instagram">
+				<h3>Likes</h3>
+				<img
+					src="styles/images/icon-instagram.svg"
+					alt="Instagram Icon"
+					class="sns-icon"
+				/>
+				<div class="today__item__numbers instagram">
+					<b>5462</b>
+					<div class="today__item__change instagram">
+						<img
+							src="styles/images/icon-up.svg"
+							alt="Up Icon"
+							class="change-icon"
+						/>
+						<span class="today__item__change__percentage">2257%</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="today__item twitter">
+				<h3>Retweets</h3>
+				<img
+					src="styles/images/icon-twitter.svg"
+					alt="Twitter Icon"
+					class="sns-icon"
+				/>
+				<div class="today__item__numbers twitter">
+					<b>117</b>
+					<div class="today__item__change twitter">
+						<img
+							src="styles/images/icon-up.svg"
+							alt="Up Icon"
+							class="change-icon"
+						/>
+						<span class="today__item__change__percentage">303%</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="today__item twitter">
+				<h3>Likes</h3>
+				<img
+					src="styles/images/icon-twitter.svg"
+					alt="Twitter Icon"
+					class="sns-icon"
+				/>
+				<div class="today__item__numbers twitter">
+					<b>507</b>
+					<div class="today__item__change twitter">
+						<img
+							src="styles/images/icon-up.svg"
+							alt="Up Icon"
+							class="change-icon"
+						/>
+						<span class="today__item__change__percentage">553%</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="today__item youtube">
+				<h3>Total Views</h3>
+				<img
+					src="styles/images/icon-youtube.svg"
+					alt="YouTube Icon"
+					class="sns-icon"
+				/>
+				<div class="today__item__numbers youtube">
+					<b>1407</b>
+					<div class="today__item__change youtube">
+						<img
+							src="styles/images/icon-down.svg"
+							alt="Down Icon"
+							class="change-icon"
+						/>
+						<span class="today__item__change__percentage">12%</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="today__item youtube">
+				<h3>Likes</h3>
+				<img
+					src="styles/images/icon-youtube.svg"
+					alt="YouTube Icon"
+					class="sns-icon"
+				/>
+				<div class="today__item__numbers youtube">
+					<b>107</b>
+					<div class="today__item__change youtube">
+						<img
+							src="styles/images/icon-down.svg"
+							alt="Down Icon"
+							class="change-icon"
+						/>
+						<span class="today__item__change__percentage">19%</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="https://github.com/Kakamotobi">Kakamotobi</a>.
+		</footer>
+	</body>
+</html>
