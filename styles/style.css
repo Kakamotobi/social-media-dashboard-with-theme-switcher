@@ -6,12 +6,6 @@
 	--twitter: hsl(203, 89%, 53%);
 	--instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
 	--youtube: hsl(348, 97%, 39%);
-	--dark-toggle: linear-gradient(
-		to right,
-		hsl(210, 78%, 56%),
-		hsl(146, 68%, 55%)
-	);
-	--light-toggle: hsl(230, 22%, 74%);
 
 	/* Neutral */
 	/* --Dark Mode-- */
@@ -21,6 +15,12 @@
 	--dark-card-bg-hover: hsl(228, 28%, 25%); /* Card BG Hover */
 	--dark-text-one: hsl(228, 34%, 66%); /* Text */
 	--dark-text-two: hsl(0, 0%, 100%); /* Text */
+	--dark-text-three: hsl(0, 0%, 100%); /* Text */
+	--dark-toggle: linear-gradient(
+		to right,
+		hsl(210, 78%, 56%),
+		hsl(146, 68%, 55%)
+	);
 	/* --Light Mode-- */
 	--light-bg: hsl(0, 0%, 100%); /* BG */
 	--light-bg-top: hsl(225, 100%, 98%); /* Top BG Pattern */
@@ -28,9 +28,31 @@
 	--light-card-bg-hover: hsl(229, 17%, 87%); /* Card BG Hover */
 	--light-text-one: hsl(228, 12%, 44%); /* Text */
 	--light-text-two: hsl(230, 17%, 14%); /* Text */
+	--light-text-three: hsl(0, 0%, 0%); /* Text */
+	--light-toggle: hsl(230, 22%, 74%);
+	/* --Default Mode-- */
+	--bg: var(--light-bg);
+	--bg-top: var(--light-bg-top);
+	--card-bg: var(--light-card-bg);
+	--card-bg-hover: var(--light-card-bg-hover);
+	--text-one: var(--light-text-one);
+	--text-two: var(--light-text-two);
+	--text-three: var(--light-text-three);
+	--toggle: var(--light-toggle);
 
 	/* Typography */
 	--ff: "Inter", sans-serif;
+}
+/* Apply Dark Mode */
+.dark {
+	--bg: var(--dark-bg);
+	--bg-top: var(--dark-bg-top);
+	--card-bg: var(--dark-card-bg);
+	--card-bg-hover: var(--dark-card-bg-hover);
+	--text-one: var(--dark-text-one);
+	--text-two: var(--dark-text-two);
+	--text-three: var(--dark-text-three);
+	--toggle: var(--dark-toggle);
 }
 
 *,
@@ -47,30 +69,32 @@ body {
 	align-items: center;
 	background: linear-gradient(
 		to bottom,
-		var(--light-bg-top) 235px,
-		var(--light-bg) 235px 100%
+		var(--bg-top) 235px,
+		var(--bg) 235px 100%
 	);
 	font-family: var(--ff);
 	font-size: var(--fs);
 	font-weight: 700;
+	color: var(--text-three);
 }
 
 /* Header */
 .title {
 	width: 325px;
 	margin-bottom: 15px;
-	border-bottom: 1px solid var(--light-text-one);
+	border-bottom: 1px solid var(--text-one);
 }
 
 h1 {
 	margin-top: 40px;
 	margin-bottom: 5px;
 	font-size: 1.5rem;
+	color: var(--text-three);
 }
 
 .title__desc {
 	margin-bottom: 25px;
-	color: var(--light-text-one);
+	color: var(--text-one);
 }
 
 /* Dark Mode Toggle */
@@ -83,7 +107,7 @@ h1 {
 }
 
 .dark-mode {
-	color: var(--light-text-one);
+	color: var(--text-one);
 }
 
 .toggle {
@@ -101,7 +125,7 @@ h1 {
 	height: 25px;
 	display: block;
 	position: relative;
-	background-color: var(--light-toggle);
+	background: var(--toggle);
 	border-radius: 20px;
 	transition: 250ms;
 	cursor: pointer;
@@ -115,7 +139,7 @@ h1 {
 	width: 19px;
 	height: 19px;
 	position: absolute;
-	background-color: var(--light-bg);
+	background: var(--bg);
 	border-radius: 50%;
 	top: 3px;
 	left: 4px;
@@ -139,14 +163,14 @@ h1 {
 	flex-direction: column;
 	align-items: center;
 	position: relative;
-	background-color: var(--light-card-bg);
+	background-color: var(--card-bg);
 	border-radius: 5px;
 	transition: 250ms;
 	cursor: pointer;
 }
 
 .overall:hover {
-	background-color: var(--light-card-bg-hover);
+	background-color: var(--card-bg-hover);
 }
 
 .overall::before {
@@ -183,7 +207,7 @@ h1 {
 .overall__account__name {
 	margin-left: 8px;
 	font-size: 0.75rem;
-	color: var(--light-text-one);
+	color: var(--text-one);
 }
 
 .overall__stat-container {
@@ -192,6 +216,7 @@ h1 {
 
 .overall__stat__num {
 	font-size: 3.3rem;
+	color: var(--text-three);
 }
 
 .overall__stat__desc {
@@ -199,7 +224,7 @@ h1 {
 	font-size: 0.8rem;
 	letter-spacing: 5px;
 	font-weight: 300;
-	color: var(--light-text-one);
+	color: var(--text-one);
 	text-transform: uppercase;
 }
 
@@ -230,12 +255,12 @@ h2 {
 	width: 325px;
 	margin-bottom: 25px;
 	font-size: 1.5rem;
-	color: var(--light-text-one);
+	color: var(--text-one);
 }
 
 h3 {
 	font-size: 0.88rem;
-	color: var(--light-text-one);
+	color: var(--text-one);
 }
 
 .today-dashboard {
@@ -250,14 +275,14 @@ h3 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background-color: var(--light-card-bg);
+	background-color: var(--card-bg);
 	border-radius: 5px;
 	transition: 250ms;
 	cursor: pointer;
 }
 
 .today__item:hover {
-	background-color: var(--light-card-bg-hover);
+	background-color: var(--card-bg-hover);
 }
 
 .today__item__info {
@@ -276,6 +301,7 @@ h3 {
 
 .today__item__number {
 	font-size: 2rem;
+	color: var(--text-three);
 }
 
 .today__item__change {
@@ -363,66 +389,4 @@ h3 {
 	.today-dashboard {
 		padding-inline: 165px;
 	}
-}
-
-/* -----Dark Mode----- */
-body.dark {
-	background: linear-gradient(
-		to bottom,
-		var(--dark-bg-top) 235px,
-		var(--dark-bg) 235px 100%
-	);
-	color: var(--dark-text-two);
-}
-
-.title.dark {
-	border-color: var(--dark-text-one);
-}
-
-.title__desc.dark {
-	color: var(--dark-text-one);
-}
-
-.dark-mode.dark {
-	color: var(--dark-text-one);
-}
-
-.toggle-slider.dark {
-	background: var(--dark-toggle);
-}
-
-.toggle-slider.dark::before {
-	background-color: var(--dark-bg);
-}
-
-.overall.dark {
-	background-color: var(--dark-card-bg);
-}
-
-.overall.dark:hover {
-	background-color: var(--dark-card-bg-hover);
-}
-
-.overall__account__name.dark {
-	color: var(--dark-text-one);
-}
-
-.overall__stat__desc.dark {
-	color: var(--light-text-one);
-}
-
-h2.dark {
-	color: var(--dark-text-two);
-}
-
-h3.dark {
-	color: var(--dark-text-one);
-}
-
-.today__item.dark {
-	background-color: var(--dark-card-bg);
-}
-
-.today__item.dark:hover {
-	background-color: var(--dark-card-bg-hover);
 }
