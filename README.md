@@ -24,7 +24,7 @@ Users should be able to:
 - CSS
 - JS
 ### What I learned
-- Light/Dark Mode Toggle.
+- Light/Dark mode toggle using CSS variables.
 
 ## Author
 - GitHub - [Kakamotobi](https://github.com/Kakamotobi)
