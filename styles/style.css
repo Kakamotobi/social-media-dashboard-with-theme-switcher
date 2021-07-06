@@ -326,8 +326,10 @@ h3 {
 	/* Header */
 	header {
 		width: 100%;
-		padding-inline: 100px;
+		max-width: 1200px;
+		margin-inline: 100px;
 		margin-bottom: 50px;
+		padding-inline: 100px;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -353,11 +355,14 @@ h3 {
 	/* Overall Dashboard */
 	.overall-dashboard {
 		width: 100%;
+		max-width: 1200px;
+		margin-inline: 100px;
 		padding-inline: 100px;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		column-gap: 20px;
 	}
 
 	.overall {
@@ -367,14 +372,19 @@ h3 {
 	/* Overview - Today */
 	h2 {
 		width: 100%;
+		max-width: 1200px;
+		margin-inline: 100px;
 		padding-inline: 100px;
 	}
 	.today-dashboard {
 		width: 100%;
+		max-width: 1200px;
+		margin-inline: 100px;
 		padding-inline: 100px;
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		column-gap: 20px;
 	}
 
 	.today__item {
@@ -387,6 +397,7 @@ h3 {
 	h2,
 	.overall-dashboard,
 	.today-dashboard {
-		padding-inline: 165px;
+		margin-inline: 165px;
+		padding-inline: 50px;
 	}
 }
